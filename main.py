@@ -77,7 +77,7 @@ with col1:
 
 
         # Modify the prompt based on the selected type
-        if prompt_type == "骨子プロンプト":
+        if prompt_type == "骨子":
             system_prompt = """
             プロンプトを作成します。以下の項目はプロンプトを作るための項目です。成果物を生成するためのプロンプトを作成してください。マークダウン形式で書くこと。以下の項目以外の余計な文言は一切いらない。
 
@@ -209,7 +209,6 @@ with col1:
         if new_chat_button:
             state.chat_history.new_chat(user_input)
         state.chat_history.add_message(user_input, response)  # Add user message to chat history
-        st.experimental_rerun()  # Rerun the app to update the chat history
 
 with col2:
     st.title("Chat with GPT")
