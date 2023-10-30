@@ -7,15 +7,14 @@ from chat_history import ChatHistory
 # Set up Streamlit layout
 st.set_page_config(layout="wide")
 
-# Custom CSS
-custom_css = """
-<style>
-    .stCode code {
-        white-space: pre-wrap !important;
-    }
-</style>
-"""
-st.markdown(custom_css, unsafe_allow_html=True)
+st.markdown("""
+    <style>
+        .reportview-container {
+            background: #your_color;
+        }
+    </style>
+    """, unsafe_allow_html=True)
+
 
 # Initialize Claude2 API and Chat History
 claude2_api = GPT3TurboAPI()
